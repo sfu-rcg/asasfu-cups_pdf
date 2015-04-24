@@ -28,7 +28,7 @@ class cups_pdf (
   $ensure_version = 'latest',
   $required_repos = $::cups_pdf::params::required_repos
   ) inherits ::cups_pdf::params {
-  package { 'cups_pdf':
+  package { 'cups-pdf':
     ensure          => "${ensure_version}",
     install_options => { "--enablerepo" => "${required_repos}" },
   }
